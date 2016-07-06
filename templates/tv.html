@@ -1,0 +1,62 @@
+<center>{{message}}</center><p><p>
+
+
+<div class="row">
+
+
+<div ng-class="theMenu ? 'col-md-12' : 'col-md-8'">
+
+
+
+              <ng-youtube-embed 
+    url="link" 
+    autoplay="false"
+    color="white"
+    disablekb="true"
+    width="100%"
+    height="500px"
+    theme="light">
+</ng-youtube-embed>
+</div>
+<div ng-class="theMenu ? 'hidden' : 'col-md-4'" class="pre-scrollable" style="max-height:500px!important;"><center>
+<button class="btn btn-default btn-sm mt-10" ng-click="currentItem = !currentItem">CURRENT</button>
+  <button class="btn btn-default btn-sm mt-10" ng-click="topItem = !topItem">TOP</button>
+<button class="btn btn-default btn-sm mt-10" ng-click="favItem = !favItem">FAV</button>
+
+<button class="btn btn-default btn-sm mt-10" ng-click="mostItem = !mostItem">MOST VIEWED</button>
+
+
+<div ng-class="currentItem ? '' : 'hidden'">
+<p><p><br><h2><br>{{title}}</h2><br>{{likeCount | number}} Likes • {{viewCount | number}} Views<br> <br><font color="#000" size="1">{{ linkVariable3 | limitTo: 500 }}{{linkVariable3.length > 500 ? '...' : ''}}<dir-disqus config="disqusConfig"></dir-disqus></font></center>
+
+</div
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+   
+     
+        
+           <data-owl-carousel owl-carousel-item="" ng-repeat="item in result track by $index" ng-if="item != 0">
+                <Center> <br>{{results[$index]}}</br></Center>
+<br>
+          <div class="owl-carousel" data-options="{navigation: true, pagination: true, rewindNav : false}" >
+          
+        
+
+      <div owl-carousel-item="" ng-repeat="items in item " class="item" >
+      <center>
+      
+    
+       <img ng-click="playItem(items.id,items.title,items.description)" ng-src="http://i3.ytimg.com/vi/{{items.id}}/hqdefault.jpg" class="img-responsive"  style="border:2px; border-style:outset;" width="500px" height="200px"><font size="-5">{{items.title}}</font>
+     </center></div></div>
+    </data-owl-carousel>
+    
+    
