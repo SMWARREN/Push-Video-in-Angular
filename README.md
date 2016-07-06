@@ -1,7 +1,7 @@
 # Push-Video-in-Angular
 Developing Push Videos in Angular. Demo:
 ### DEMO
-[Push Videos Demo](https://www.mildfun.com/videos/)
+[Push Videos Demo](http://www.mildfun.com/videos/)
 
 
 ## THE APP.JS
